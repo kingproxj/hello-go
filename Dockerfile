@@ -10,6 +10,7 @@ ADD . /go/src/github.com/knative/docs/helloworld
 # either manually or with a tool like "godep".)
 RUN go install github.com/knative/docs/helloworld
 RUN echo "10.10.7.1 harbor.iop.com" >> /etc/hosts
+RUN echo "nameserver 10.100.1.58" >> /etc/resolv.conf
 
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/helloworld
