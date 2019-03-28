@@ -9,7 +9,7 @@ ADD . /go/src/github.com/knative/docs/helloworld
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
 RUN go install github.com/knative/docs/helloworld
-RUN echo "34.193.147.40 registry-1.docker.io" >> /etc/hosts
+RUN echo "10.10.7.1 harbor.iop.com" >> /etc/hosts
 
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/helloworld
